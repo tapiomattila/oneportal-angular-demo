@@ -1,0 +1,42 @@
+<div class="d-flex">
+  <h2 class="display-4" style="font-size: 42px; width:50%;">Token List</h2>
+
+  <div class="input-group h-100 mt-2">
+    <input type="text" class="form-control" placeholder="Find by relatedId from the database" style="flex-grow: 1; align-self: center;"
+      #input>
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="inputSearch(input.value)" (click)="input.value=''">Search</button>
+    </div>
+  </div>
+</div>
+<p *ngIf="inputNeedsValue" class="float-right" style="color:red; margin-right:25%;">Input needs value</p>
+
+<div class="mt-2 mb-4" *ngIf="tokenList.length > 0">
+  <i>RelatedId - Key - value</i>
+</div>
+
+<h5 *ngIf="tokenList.length > 0 && _tokenService.tokenCreated">
+  Created Tokens
+</h5>
+<ul class="list-group list-items-cont" *ngIf="tokenList.length > 0 && _tokenService.tokenCreated">
+  <li *ngFor="let token of tokenList;">
+    <a class="list-group-item flex-custom custom-list-item-hover">
+      <i class="item">{{token.relatedId}} - {{token.key}} - {{token.value}}</i>
+      <i class="fa fa-edit item2-edit" style="align-self: center;" (click)="editToken(token)"></i>
+      <i class="fa fa-trash item3-trash" style="align-self: center;" (click)="deleteToken(token)"></i>
+    </a>
+  </li>
+</ul>
+
+<h5 *ngIf="_tokenService.inputTokenList.length > 0 && _tokenService.inputUsed">
+  Searched Tokens
+</h5>
+<ul class="list-group list-items-cont" *ngIf="_tokenService.inputTokenList.length > 0 && _tokenService.inputUsed">
+  <li *ngFor="let token of _tokenService.inputTokenList;">
+    <a class="list-group-item flex-custom custom-list-item-hover">
+      <i class="item">{{token.relatedId}} - {{token.key}} - {{token.value}}</i>
+      <i class="fa fa-edit item2-edit" style="align-self: center;" (click)="editToken(token)"></i>
+      <i class="fa fa-trash item3-trash" style="align-self: center;" (click)="deleteToken(token)"></i>
+    </a>
+  </li>
+</ul>

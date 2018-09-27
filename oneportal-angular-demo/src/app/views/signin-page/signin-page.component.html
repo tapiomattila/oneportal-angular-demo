@@ -1,0 +1,17 @@
+<div class="mt-5">
+
+    <div style="display: flex; justify-content: space-between;">
+        <img src="../../../assets/img/onePortal_logo.png" alt="oneportal_logo" class="logo">
+    </div>
+    <hr>
+    <div style="height:50vh;">
+        <div style="display: flex; justify-content: center; margin-top:20%;">
+
+            <button class="btn btn-cust" style="align-self: center;" (click)="startAuth()">Sign In</button>
+
+        </div>
+        <div style="display: flex; justify-content: center; margin-top:15px;">
+            <p style="color: red;" *ngIf="_authService.signoutNotice">Signed out due to authorization token expire time. Please sign in again.</p>
+        </div>
+    </div>
+</div>

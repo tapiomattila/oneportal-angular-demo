@@ -1,0 +1,27 @@
+<h2 class="display-4" style="font-size: 42px;">Simple Token</h2>
+
+<form [formGroup]="simpleTokenForm" (ngSubmit)="submitForm()">
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+            <span class="input-group-text" style="width: 130px;">RelatedId</span>
+        </div>
+        <input class="form-control" type="text" formControlName="relatedId">
+    </div>
+
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+            <span class="input-group-text" style="width: 130px;">Key</span>
+        </div>
+        <input class="form-control" type="text" formControlName="key">
+    </div>
+
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+            <span class="input-group-text" style="width: 130px;">Value</span>
+        </div>
+        <input class="form-control" type="text" formControlName="value">
+    </div>
+
+    <button class="btn btn-primary mt-3" type="submit" [disabled]="!simpleTokenForm.valid">Submit</button>
+    <div *ngIf="JSONFormat" style="color: red; font-size: 24px;" >JSON format not allowed in simple token</div>
+</form>

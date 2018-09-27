@@ -1,0 +1,40 @@
+
+li {
+    list-style: none;
+}
+
+.list-items-cont {
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.custom-list-item-hover:hover {
+    background:rgba(245, 241, 241, 0.5);
+}
+
+.flex-custom {
+    display: flex;
+}
+
+.item {
+    flex-grow: 1;
+}
+
+.item2-edit {
+    font-size: 32px;
+    margin-right: 10px;
+}
+
+.item2-edit:hover {
+    cursor: pointer;
+    color:rgb(123, 123, 123);
+}
+
+.item3-trash {
+    font-size: 32px;
+}
+
+.item3-trash:hover {
+    cursor: pointer;
+    color:rgb(123, 123, 123);
+}

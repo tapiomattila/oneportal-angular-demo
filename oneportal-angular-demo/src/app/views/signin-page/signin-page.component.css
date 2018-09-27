@@ -1,0 +1,19 @@
+.logo {
+    max-height:100px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.flex-custom-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-cust {
+    width:60%;
+    height:40px;
+    margin:auto;
+    border:1px solid grey;
+}

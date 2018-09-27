@@ -1,0 +1,25 @@
+.logo {
+    max-height:100px;
+}
+
+.navigation-custom {
+    width:50%;
+}
+
+.cust-btn {
+    min-width: 100px;
+    margin-right:20px;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.signout-btn {
+    background: transparent;
+    border:none;
+}
+
+.signout-btn:hover {
+    cursor: pointer;
+}

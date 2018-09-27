@@ -1,0 +1,13 @@
+
+{
+    "MGM_API_CLIENT_ID": "<client_management_api_id>",
+    "MGM_API_SECRET": "<client_management_api_secret>",
+    "MGM_API_TOKEN_ENDPOINT": "https://oneportal.t5.fi/api/rest/v1/token/",
+    "CLIENT_URI_LOCAL" : "http%3A%2F%2Flocalhost:3000",
+    "CLIENT_URI" : "https%3A%2F%2F<client_uri>",
+    "OIDC_CLIENT_ID" : "<client_oidc_id>",
+    "OIDC_CLIENT_SECRET" : "<client_oidc_secret>",
+    "OIDC_GRANT_TYPE" : "authorization_code",
+    "OIDC_USERINFO" : "https://oneportal.t5.fi/openid/userinfo",
+    "OIDC_CLIENT_TOKEN" : "https://oneportal.t5.fi/openid/token"
+}

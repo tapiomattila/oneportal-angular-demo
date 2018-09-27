@@ -1,0 +1,12 @@
+form {
+    margin-top:50px;
+    margin-bottom:30px;
+}
+
+.input-group {
+    margin-top:20px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}

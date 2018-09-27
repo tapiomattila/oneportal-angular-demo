@@ -1,0 +1,45 @@
+<h2 class="display-4" style="font-size: 42px;">Profile</h2>
+
+<div class="profile-container"></div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="form_name" style="font-weight: bold;">Firstname</label>
+            <label for="form_lastname" *ngIf="_authService.profile" style="margin-left:20px;">{{_authService.profile.first_name}}</label>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="form_lastname" style="font-weight: bold;">Lastname</label>
+            <label for="form_lastname" *ngIf="_authService.profile" style="margin-left:20px;">{{_authService.profile.last_name}}</label>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="form_email" style="font-weight: bold;">Email</label>
+            <label for="form_lastname" *ngIf="_authService.profile" style="margin-left:20px;">{{_authService.profile.email}}</label>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="form_phone" style="font-weight: bold;">Phone</label>
+            <label for="form_lastname" *ngIf="_authService.profile" style="margin-left:20px;">{{_authService.profile.phone}}</label>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="form_email" style="font-weight: bold;">Recovery Email</label>
+            <label for="form_lastname" *ngIf="_authService.profile" style="margin-left:20px;">{{_authService.profile.rec_email}}</label>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="form_phone" style="font-weight: bold;">Recovery Phone</label>
+            <label for="form_lastname" *ngIf="_authService.profile" style="margin-left:20px;">{{_authService.profile.rec_phone}}</label>
+        </div>
+    </div>
+</div>

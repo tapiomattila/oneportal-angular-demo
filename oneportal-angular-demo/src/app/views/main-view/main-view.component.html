@@ -1,0 +1,24 @@
+<div class="d-flex mb-5">
+
+    <div class="mr-auto p-2">
+        <img src="../../../assets/img/onePortal_logo.png" alt="oneportal_logo" class="logo">
+    </div>
+    <div class="p-2" style="align-self: center;">
+        <button class="signout-btn" style="align-self: center;" (click)="signout()">SignOut</button>
+    </div>
+    <div class="p-2" style="align-self: center;">
+        <i class="fa fa-gear" style="align-self: center;" (click)="toProfile()"> Profile</i>
+    </div>
+</div>
+
+<hr>
+<div class="navigation-custom">
+    <div style="display: flex; justify-content: flex-start;">
+        <button class="btn cust-btn" (click)="toSimple()">Simple</button>
+        <button class="btn cust-btn" (click)="toComplex()">Complex</button>
+        <button class="btn cust-btn" (click)="toList()">List</button>
+    </div>
+</div>
+<hr class="mb-3">
+
+<router-outlet></router-outlet>
