@@ -16,10 +16,39 @@ Steps.
 After cloning:
 
 path: root folder.
-Run `ng build` to build the project and combine application to run as a node app. This will build the application and store the angular artifacts to `/backend/angular` folder. Use the `--prod` flag for a production build.
+
+Install dependencies
+```shell
+  npm install
+```
+
+
+Build to node application
+
+Run 
+
+```shell
+ng build
+```
+
+to build the project and combine application to run as a node app. This will build the application and store the angular artifacts to `/backend/angular` folder. 
+
+Use
+
+```shell
+ng build --prod
+```
+for a production build.
 
 path: root/backend/
-Then in `/backend` folder `nodemon server.js` will start the application in port 3000 as a node application.
+In `/backend` folder 
+
+```shell
+nodemon server.js
+```
+
+will start the application in port 3000 as a node application.
+
 
 application is now running in on `http://localhost:3000`
 
@@ -28,10 +57,11 @@ application is now running in on `http://localhost:3000`
 
 There are several configurations that need to be set to use `Oneportal OpenID Connect` and `Management API`.
 
-In `https://oneportal.t5.fi/.well-known/openid-configuration` the OIDC configuration informations can be found.
+OIDC configuration informations can be found in `https://oneportal.t5.fi/.well-known/openid-configuration`.
 
 Configuration that need to be changed for the application to use Oneportal OIDC and MGM API. (production/development)
 
+```javascript
 src/app/environments/environment.prod.ts
 
 export const environment = {
@@ -64,12 +94,21 @@ export const environment = {
 
   oidc_auth_path: "https://oneportal.t5.fi/openid/auth"
 };
+```
 
+In local development environment 
+```javascript
+conf.json 
+```
+file is used
 
-In local development environment `conf.json` file is used
+In production setup, configurations are put on 
+```shell
+docker volume 
+```
+on a server, NEVER in the application file as in the development setup.
 
-In production setup the configurations are put on `docker volume` on a server, NEVER in the application file as in the development setup.
-
+```javascript
 backend configuration (development)
 
 backend/conf.json
@@ -98,10 +137,12 @@ backend/conf.json
 
     "OIDC_CLIENT_TOKEN" : "https://oneportal.t5.fi/openid/token"
 }
+```
 
-
+```shell
 backend/routes/auth.js
 
 For development, use line 29
 For production, use line 28.
+```
 
